@@ -190,14 +190,19 @@ create_html_content <- function(year) {
     leaflet::addEasyButton(
       leaflet::easyButton(
         icon = 'fa-globe', title = 'Zoom initial',
-        onClick = leaflet::JS('function(btn){ location.reload(); }'))) %>%
-
-    leaflet::addLayersControl(
-      baseGroups = paste0(c('Votes cast', 'Abstention'), rep(c(' (2nd round)', 
-                                                               ' (1st round)'), 
-                                                             each = each)),
-      options = leaflet::layersControlOptions(collapsed = TRUE),
-      position = 'topleft')
+        onClick = leaflet::JS('function(btn){ location.reload(); }')))
+  
+  if (file.exists((filename_1)) || file.exists((filename_2))) {
+    
+    map <- map %>% 
+      
+      leaflet::addLayersControl(
+        baseGroups = paste0(c('Votes cast', 'Abstention'), 
+                            rep(c(' (2nd round)', ' (1st round)'), 
+                                each = each)),
+        options = leaflet::layersControlOptions(collapsed = TRUE),
+        position = 'topleft')
+  }
   
   
   ## Export core html page ----
@@ -218,4 +223,5 @@ create_html_content <- function(year) {
   
   cat(paste0(html, collapse = "\n"), file = here::here("content", "core.html"))
   
+  invisible(NULL)
 }
