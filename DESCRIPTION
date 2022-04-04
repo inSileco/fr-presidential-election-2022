@@ -1,0 +1,43 @@
+Package: fr.presidential.election.2022
+Type: Package
+Title: Results of French Presidential Election 2022
+Version: 1.0
+Authors@R: c(
+    person(given   = "Nicolas",
+           family  = "Casajus",
+           role    = c("aut", "cre", "cph"),
+           email   = "nicolas.casajus@gmail.com",
+           comment = c(ORCID = "0000-0002-5537-5294")),
+    person(given   = "Kevin",
+           family  = "Cazelles",
+           role    = "aut",
+           email   = "kevin.cazelles@gmail.com",
+           comment = c(ORCID = "0000-0001-6619-9874")),
+    person(given   = "Steve",
+           family  = "Vissault",
+           role    = "aut",
+           email   = "s.vissault@@yahoo.fr",
+           comment = c(ORCID = "0000-0002-0866-4376")))
+Description: Code to vizualise results of French Presidential Election for the 
+    years 2022.
+URL: https://github.com/insileco/fr-presidential-election-2022
+BugReports: https://github.com/insileco/fr-presidential-election-2022/issues
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Imports:
+    devtools,
+    here,
+    highcharter (== 0.5.0),
+    htmltools,
+    htmlwidgets,
+    leafem,
+    leaflet,
+    leafpop,
+    magrittr,
+    RColorBrewer,
+    readxl,
+    sp,
+    utils

@@ -1,0 +1,21 @@
+{
+  "name": "French Presidential Election 2022",
+  "homepage": "https://github.com/insileco/fr-presidential-election-2022",
+  "authors": [
+    "Nicolas Casajus <nicolas.casajus@gmail.com>"
+  ],
+  "description": "Get CSS for the app",
+  "main": "make.R",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0"
+  }
+}

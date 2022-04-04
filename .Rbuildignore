@@ -1,0 +1,10 @@
+^renv$
+^renv\.lock$
+^LICENSE\.md$
+^data$
+^content$
+^.*\.Rproj$
+^\.Rproj\.user$
+^make\.R$
+^bower\.json$
+^index\.html$
