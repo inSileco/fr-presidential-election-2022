@@ -33,7 +33,7 @@ read_election_results <- function(year, round) {
   
   path <- here::here("data", "raw-data", paste0("Presidentielle_", year, 
                                                 "_Resultats_Tour_", round, 
-                                                "_c.xls"))
+                                                "_c.csv"))
   
   if (!file.exists(path)) {
     stop("Unable to find elections results file for year ", year, " and round ",
@@ -41,17 +41,13 @@ read_election_results <- function(year, round) {
   }
   
   
-  tab <- readxl::read_excel(path  = path, 
-                            sheet = paste("D\u00e9partements Tour", round),
-                            skip  = ifelse(round == 1, 0, 3),
-                            progress = FALSE)
-  tab <- as.data.frame(tab)
+  tab <- read.csv(path, header = TRUE)
   
   
   ## Select general columns ----
   
-  pattern <- paste0("d\u00e9partement$|^Inscrits$|^Abstentions$|^Votants$|", 
-                    "^Blancs$|^Nuls$|^Exprim\u00e9s$")
+  pattern <- paste0("^Code$|Departement|^Inscrits$|^Abstentions$|^Votants$|", 
+                    "^Blancs$|^Nuls$|^Exprimes$")
   
   dat <- tab[ , grep(pattern, colnames(tab))]
   colnames(dat) <- c("no_departement", "departement", "inscrits", "abstention", 
