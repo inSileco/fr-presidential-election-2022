@@ -24,6 +24,11 @@ devtools::load_all(here::here())
 year <- 2022
 
 
+## Download election results ----
+
+# get_election_results(year)
+
+
 ## Add election results to French departments geometry ----
 
 add_data_to_shp(year, round = 1)

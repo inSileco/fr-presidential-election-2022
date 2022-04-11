@@ -3,6 +3,7 @@
 export("%>%")
 export(add_data_to_shp)
 export(create_html_content)
+export(get_election_results)
 export(make_tooltip_barplot)
 export(make_tooltip_piechart)
 export(read_candidates_info)
