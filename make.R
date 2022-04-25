@@ -26,23 +26,23 @@ year <- 2022
 
 ## Download election results ----
 
-# get_election_results(year)
+get_election_results(year)
 
 
 ## Add election results to French departments geometry ----
 
-add_data_to_shp(year, round = 1)
-# add_data_to_shp(year, round = 2)
+# add_data_to_shp(year, round = 1)
+add_data_to_shp(year, round = 2)
 
 
 ## Create tooltips - Barplots for 1st round ----
 
-make_tooltip_barplot(year)
+# make_tooltip_barplot(year)
 
 
 ## Create tooltips - Piecharts for 2nd round ----
 
-# make_tooltip_piechart(year)
+make_tooltip_piechart(year)
 
 
 ## Create Web page ----
